@@ -1,18 +1,19 @@
 import '../stylesheets/Product.css'
+import ProductInformation from './ProductInformation';
 
-const Product = () => {
+const Product = ({ nameImage, nameCommon, nameScientist, family, inConservation }) => {
   return (
-    <div className='product-container'>
+    <div className={inConservation ? 'product-container conservation' : 'product-container'}>
       <img
         className='image-product'
-        src={require(`../images/plant-number-${'one'}.png`)}
+        src={require(`../images/plant-number-${nameImage}.png`)}
         alt='plant number one'
       />
-      <div className='information-container'>
-        <p className='name-common'>Nombre Común</p>
-        <p className='name-scientist'><i>Nombre cientifico</i></p>
-        <p className='family'>Familia</p>
-      </div>
+      <ProductInformation
+        nameCommon={nameCommon}
+        nameScientist={nameScientist}
+        family={family}
+      />
     </div>
   );
 };
