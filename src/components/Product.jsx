@@ -13,6 +13,7 @@ const Product = ({ nameImage, nameCommon, nameScientist, family, inConservation 
         nameCommon={nameCommon}
         nameScientist={nameScientist}
         family={family}
+        inConservation={inConservation}
       />
     </div>
   );
