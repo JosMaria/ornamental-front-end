@@ -1,12 +1,12 @@
 import '../stylesheets/ProductInformation.css'
 import { RiPlantFill } from "react-icons/ri";
 
-const ProductInformation = ({ nameCommon, nameScientist, family , inConservation}) => {
+const ProductInformation = ({ commonName, scientistName, family , inConservation}) => {
   return (
     <div className='product-information-container'>
       <div className='information-container'>
-        <p className='name-common'>{nameCommon}</p>
-        <p className='name-scientist'><i>{nameScientist}</i></p>
+        <p className='name-common'>{commonName}</p>
+        <p className='name-scientist'><i>{scientistName}</i></p>
         <p className='family'>{family}</p>
       </div>
       {

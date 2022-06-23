@@ -5,13 +5,14 @@
   flex-direction: column;
   flex-wrap: wrap;
   height: 300px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 13px 13px 1px rgb(0 0 0 / 50%);
-  background-color: rgb(164, 175, 221);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(175,196,137,1) 99%, rgba(101,149,159,1) 100%);
+
 }
 
 .product-container.conservation {
-  background-color: rgb(146, 202, 139);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(132,184,41,1) 99%, rgba(101,149,159,1) 100%);
 }
 
 .image-product {
