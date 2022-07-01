@@ -1,26 +1,20 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import Catalog from './components/Catalog';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Home } from './components/Home';
+import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className='App'>
       <BrowserRouter>
         <Routes>
           <Route
             path='/catalog'
-            element={
-              <>
-                <Navbar title='CATALOGO' />
-                <Catalog />
-              </>
-            }>
+            element={<Home />}>
           </Route>
         </Routes>
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;

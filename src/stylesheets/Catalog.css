@@ -1,6 +1,8 @@
 .catalog-container {
+  padding: 0.9375em;
+  background-color: olivedrab;
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
   justify-content: center;
+  align-content: center;
 }

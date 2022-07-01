@@ -1,7 +1,7 @@
 import '../stylesheets/ProductInformation.css'
 import { RiPlantFill } from "react-icons/ri";
 
-const ProductInformation = ({ commonName, scientistName, family , inConservation}) => {
+export const ProductInformation = ({ commonName, scientistName, family , inConservation}) => {
   return (
     <div className='product-information-container'>
       <div className='information-container'>
@@ -22,5 +22,3 @@ const ProductInformation = ({ commonName, scientistName, family , inConservation
     </div>
   );
 };
-
-export default ProductInformation;

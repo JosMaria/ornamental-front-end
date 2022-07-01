@@ -1,0 +1,16 @@
+.identification-container {
+  padding: 10px 0 10px 0;
+  background: rgb(56,94,218);
+  background: linear-gradient(0deg, rgba(56,94,218,1) 36%, rgba(166,176,212,1) 66%);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 15px 15px;
+}
+
+.identification-container.conservation {
+  background: rgb(34,157,24);
+  background: linear-gradient(0deg, rgba(34,157,24,1) 36%, rgba(156,203,137,1) 66%);
+}
+
