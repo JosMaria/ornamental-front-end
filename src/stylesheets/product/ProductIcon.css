@@ -1,0 +1,26 @@
+.icon-container {
+  background-color: azure;
+  border-radius: 50%;
+  margin-right: 0.9375em;
+}
+
+.icon {
+  padding: 0.4em;
+  width: 1.4em;
+  height: 1.4em;
+  transition: 0.1s;
+}
+
+.icon:hover {
+  font-size: 115%;
+}
+
+.plant {
+  color: green;
+}
+
+.reserve {
+  cursor: pointer;
+  color: black;
+  transition: 0.2s;
+}

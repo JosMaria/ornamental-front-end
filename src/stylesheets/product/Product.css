@@ -1,0 +1,9 @@
+.product-container {
+  display: flex;
+  flex-direction: column;
+  width: 18em;
+  height: 17.5em;
+  margin: 0.625em;
+  box-shadow: 10px 13px 13px 1px rgb(0 0 0 / 70%);
+  border-radius: 15px 15px 15px 15px;
+}
