@@ -1,0 +1,13 @@
+.tab-container {
+  background-color: royalblue;
+  color: aliceblue;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.tab-container:hover {
+  color: black;
+  height: 110%;
+}
