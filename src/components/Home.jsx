@@ -1,12 +1,16 @@
 import { Catalog } from './Catalog';
+import { Navbar } from './Navbar';
+import { useState } from 'react';
 import '../stylesheets/Home.css'
-import Navbar from './Navbar';
 
 export const Home = () => {
+
+  const [classification, setClassification] = useState('')
+
   return (
     <>
-      <Navbar title={'This is a title'}/>
-      <Catalog />
+      <Navbar searchBy={setClassification} />
+      <Catalog classification={classification} />
     </>
   );
 };

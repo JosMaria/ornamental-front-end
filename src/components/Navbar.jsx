@@ -1,10 +1,9 @@
 import { Tab } from './Tab';
 import { fetchClassifications } from '../functions/functions';
 import { useEffect, useState } from 'react';
-
 import '../stylesheets/Navbar.css'
 
-const Navbar = () => {
+export const Navbar = ({ searchBy }) => {
 
   const [tabs, setTabs] = useState([]);
 
@@ -19,6 +18,12 @@ const Navbar = () => {
         return tab
       }
     ));
+    changeSearch();
+  };
+
+  const changeSearch = () => {
+    const tabChecked = tabs.find(tab => tab.isChecked);
+    searchBy(tabChecked ? tabChecked.nameClassification : '')
   };
 
   return (
@@ -36,5 +41,3 @@ const Navbar = () => {
     </div>
   );
 };
-
-export default Navbar;
