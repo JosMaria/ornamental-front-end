@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home } from './components/Home';
 import './App.css';
 
-const App = () => {
+export const App = () => {
   return (
     <div className='App'>
       <BrowserRouter>
@@ -16,5 +16,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;

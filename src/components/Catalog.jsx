@@ -1,15 +1,16 @@
 import { Product } from './product/Product';
 import { useEffect, useState } from 'react';
-import { fetchAllPlants } from '../functions/functions';
+import { fetchAllPlants, fetchAllPlantsByClassifications } from '../functions/functions';
 import '../stylesheets/Catalog.css'
 
-export const Catalog = () => {
+export const Catalog = ({ classification }) => {
 
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetchAllPlants(setProducts);
-  }, []);
+  classification.length !== 0 ? fetchAllPlantsByClassifications(setProducts, classification)
+                  : fetchAllPlants(setProducts);
+  }, [classification]);
 
   return (
     <div className='catalog-container'>
