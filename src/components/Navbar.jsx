@@ -1,19 +1,28 @@
 import { Tab } from './Tab';
+import { fetchClassifications } from '../functions/functions';
+import { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import '../stylesheets/Navbar.css'
 
 const Navbar = () => {
+
+  const [tabs, setTabs] = useState([]);
+
+  useEffect(() => {
+    fetchClassifications(setTabs);
+  }, [])
+
   return (
     <div className='navbar-container'>
-      <Tab classification='ORNAMENTAL'/>
-      <Tab classification='FORESTAL'/>
-      <Tab classification='INDUSTRIAL'/>
-      <Tab classification='ALIMENTICIA'/>
-      <Tab classification='MEDICINAL'/>
-      <Tab classification='EXOTICA'/>
-      <Tab classification='CACTU'/>
-      <Tab classification='FRUTAL'/>
-      <Tab classification='CRASA'/>
-      <Tab classification='SUCULENTA'/>
+      {
+        tabs.map(tab =>
+          <Tab
+            key={uuidv4()}
+            classification={tab}
+            isChecked={false}
+          />
+        )
+      }
     </div>
   );
 };

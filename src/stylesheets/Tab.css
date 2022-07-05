@@ -1,13 +1,36 @@
 .tab-container {
   background-color: royalblue;
-  color: aliceblue;
-  padding: 20px;
-  text-align: center;
   text-decoration: none;
+  text-align: center;
   flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 20px 15px 20px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.text {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .tab-container:hover {
-  color: black;
-  height: 110%;
+  background-color: darkgreen;
+  cursor: pointer;
+}
+
+.icon-check {
+  transition: 0.3s;
+  font-size: 20px;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+.icon-check.checked {
+  visibility: visible;
 }
