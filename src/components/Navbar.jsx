@@ -1,7 +1,7 @@
 import { Tab } from './Tab';
 import { fetchClassifications } from '../functions/functions';
 import { useEffect, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+
 import '../stylesheets/Navbar.css'
 
 const Navbar = () => {
@@ -10,16 +10,26 @@ const Navbar = () => {
 
   useEffect(() => {
     fetchClassifications(setTabs);
-  }, [])
+  }, []);
+
+  const handleClick = (event) => {
+    setTabs(
+      tabs.map(tab => {
+        tab.isChecked = tab.nameClassification === event.target.textContent ? true : false;
+        return tab
+      }
+    ));
+  };
 
   return (
     <div className='navbar-container'>
       {
         tabs.map(tab =>
           <Tab
-            key={uuidv4()}
-            classification={tab}
-            isChecked={false}
+            key={tab.key}
+            classification={tab.nameClassification}
+            isChecked={tab.isChecked}
+            handleClick={handleClick}
           />
         )
       }
